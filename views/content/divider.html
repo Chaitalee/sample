@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+    <div>
+      <div class="col-md-4">
+        <h3>List of Categories</h3>
+      <div ng-repeat="ca in category">
+        <a href="" ng-click="det(ca.id); scat(ca.id);">
+          {{ca.id}}.{{ca.name}}</a>
+      </div>
+
+      <h3>List of Sub Categories</h3>
+
+      <div ng-repeat="c in subcat">
+        <!-- <a href="" ng-click="scat(c.id);"> -->
+      <a href="" ng-click="scat1(c.id);">  {{c.id}}.{{c.name}} </a></div>
+    </div>
+
+
+  </div>
+
+  <div class="col-md-8">
+    <h3>Detail</h3>
+    <table class="table table-bordered" ng-repeat="sa in saubcat">
+
+
+      <thead>
+        <tr>
+          <th>{{sa.name}}</th>
+        </tr>
+
+        <td><img ng-src="http://192.168.0.117/selfbackend/uploads/{{sa.image}}" style="height:100px;width:100px"></td>
+      </tr>
+      <tr>
+        <td>{{sa.price}}</td>
+      </tr>
+    </table>
+
+    <div class="col-xs-3" ng-repeat="da2 in detail">
+
+      <table class="table table-bordered" ng-repeat="da in da2">
+
+
+        <thead>
+          <tr>
+            <th>{{da.name}}</th>
+          </tr>
+
+          <td><img ng-src="http://192.168.0.117/selfbackend/uploads/{{da.image}}" style="height:100px;width:100px"></td>
+        </tr>
+        <tr>
+          <td>{{da.price}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</div>
+</div>
